@@ -6,25 +6,29 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px; /* added padding for small screens */
   background: linear-gradient(135deg, #f6a623, #f83600);
 }
 
 .app {
   text-align: center;
   color: white;
+  width: 100%;
+  max-width: 400px; /* limits width on larger screens */
 }
 
 .card {
   margin-top: 20px;
-  padding: 30px;
-  width: 350px;
+  padding: 25px 20px; /* slightly smaller padding for smaller devices */
+  width: 100%;
   border-radius: 20px;
   background: rgba(0,0,0,0.7);
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
 
 #joke {
@@ -32,6 +36,7 @@ body {
   line-height: 1.5;
   opacity: 1;
   transition: opacity 0.3s ease;
+  white-space: pre-line;
 }
 
 .fade {
@@ -40,8 +45,10 @@ body {
 
 .controls {
   display: flex;
+  flex-wrap: wrap; /* allows wrapping on small screens */
   gap: 10px;
   margin-bottom: 15px;
+  justify-content: center; /* center buttons on smaller screens */
 }
 
 button, select {
@@ -49,12 +56,15 @@ button, select {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  flex: 1 1 45%; /* flexible width for responsive layout */
+  min-width: 120px;
 }
 
 button {
   background: #f6a623;
   color: black;
   font-weight: bold;
+  transition: transform 0.2s ease;
 }
 
 button:hover {
@@ -63,8 +73,23 @@ button:hover {
 
 .extra {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* stack items vertically on small screens */
+  gap: 10px;
+  margin-top: 10px;
 }
-#joke {
-  white-space: pre-line;
+
+/* Media Queries for smaller devices */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px 15px;
+  }
+
+  button, select {
+    flex: 1 1 100%; /* full width buttons */
+    min-width: unset;
+  }
+
+  .extra {
+    align-items: center; /* center stacked items */
+  }
 }
