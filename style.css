@@ -6,29 +6,25 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; /* added padding for small screens */
   background: linear-gradient(135deg, #f6a623, #f83600);
 }
 
 .app {
   text-align: center;
   color: white;
-  width: 100%;
-  max-width: 400px; /* limits width on larger screens */
 }
 
 .card {
   margin-top: 20px;
-  padding: 25px 20px; /* slightly smaller padding for smaller devices */
-  width: 100%;
+  padding: 30px;
+  width: 350px;
   border-radius: 20px;
   background: rgba(0,0,0,0.7);
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
 }
 
 #joke {
@@ -36,7 +32,6 @@ body {
   line-height: 1.5;
   opacity: 1;
   transition: opacity 0.3s ease;
-  white-space: pre-line;
 }
 
 .fade {
@@ -45,10 +40,8 @@ body {
 
 .controls {
   display: flex;
-  flex-wrap: wrap; /* allows wrapping on small screens */
   gap: 10px;
   margin-bottom: 15px;
-  justify-content: center; /* center buttons on smaller screens */
 }
 
 button, select {
@@ -56,15 +49,12 @@ button, select {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  flex: 1 1 45%; /* flexible width for responsive layout */
-  min-width: 120px;
 }
 
 button {
   background: #f6a623;
   color: black;
   font-weight: bold;
-  transition: transform 0.2s ease;
 }
 
 button:hover {
@@ -73,23 +63,77 @@ button:hover {
 
 .extra {
   display: flex;
-  flex-direction: column; /* stack items vertically on small screens */
-  gap: 10px;
-  margin-top: 10px;
+  justify-content: space-between;
+}
+#joke {
+  white-space: pre-line;
+}* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-/* Media Queries for smaller devices */
-@media (max-width: 480px) {
-  .card {
-    padding: 20px 15px;
-  }
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f6a623, #f83600);
+}
 
-  button, select {
-    flex: 1 1 100%; /* full width buttons */
-    min-width: unset;
-  }
+.app {
+  text-align: center;
+  color: white;
+}
 
-  .extra {
-    align-items: center; /* center stacked items */
-  }
+.card {
+  margin-top: 20px;
+  padding: 30px;
+  width: 350px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.7);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#joke {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fade {
+  opacity: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+button, select {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button {
+  background: #f6a623;
+  color: black;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.extra {
+  display: flex;
+  justify-content: space-between;
+}
+#joke {
+  white-space: pre-line;
 }
