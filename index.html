@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joke Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <h1>😂 Joke Generator</h1>
+
+    <div class="card">
+      <p id="joke">Loading...</p>
+
+      <div class="controls">
+        <select id="category">
+  <option value="Any">Any</option>
+  <option value="Programming">Programming</option>
+  <option value="Misc">Misc</option>
+  <option value="Dark">Dark</option>
+  <option value="Pun">Pun</option>
+  <option value="Spooky">Spooky</option>
+  <option value="Christmas">Christmas</option>
+  <option value="random">🎲 Random Mix</option>
+  
+</select>
+
+        <button id="btn">New Joke</button>
+      </div>
+
+      <div class="extra">
+        <button id="copy">📋 Copy</button>
+        <button id="speak">🔊 Speak</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

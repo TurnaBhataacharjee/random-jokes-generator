@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f6a623, #f83600);
+}
+
+.app {
+  text-align: center;
+  color: white;
+}
+
+.card {
+  margin-top: 20px;
+  padding: 30px;
+  width: 350px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.7);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#joke {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fade {
+  opacity: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+button, select {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button {
+  background: #f6a623;
+  color: black;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.extra {
+  display: flex;
+  justify-content: space-between;
+}
+#joke {
+  white-space: pre-line;
+}
